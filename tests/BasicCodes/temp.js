@@ -1,11 +1,21 @@
-function addition() {// ✅ works (x is visible in whole function)
+// Addition
+function add(a, b) {
+    return a + b;
 }
-addition();
 
-function mul() {// ✅ works (x is visible in whole function)
+// Multiplication
+function multiply(a, b) {
+    return a * b;
 }
-addition();
 
-function sub() {// ✅ works (x is visible in whole function)
+// Division
+function divide(a, b) {
+    if (b === 0) {
+        return "Error";
+    }
+    return a / b;
 }
-addition();
+
+console.log("Add:", add(10, 20));
+console.log("Multiply:", multiply(5, 6));
+console.log("Divide:", divide(20, 3));
