@@ -1,21 +1,25 @@
-// Addition
-function add(a, b) {
-    return a + b;
-}
+const users = ["standard_user", "locked_out_user", "problem_user"];
+console.log(users);
 
-// Multiplication
-function multiply(a, b) {
-    return a * b;
-}
+const testCases = ["Login", "Logout"];
+testCases.push("Add to cart");
+console.log(testCases);
+testCases.pop();
+console.log(testCases);
 
-// Division
-function divide(a, b) {
-    if (b === 0) {
-        return "Error";
-    }
-    return a / b;
-}
 
-console.log("Add:", add(10, 20));
-console.log("Multiply:", multiply(5, 6));
-console.log("Divide:", divide(20, 3));
+
+
+
+let busket = ["Apple", "Orange"];
+busket.push("stbrw");
+console.log(busket);
+busket.pop();
+console.log(busket);
+
+
+let countries = ["USA", "Canada"];
+countries.push("Bangladesh");
+console.log(countries);
+countries.pop();
+console.log(countries);
