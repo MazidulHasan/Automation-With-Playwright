@@ -1,0 +1,7 @@
+Task: Write a test for https://www.saucedemo.com that does the following:
+
+Log in with standard_user / secret_sauce using getByLabel or getByPlaceholder
+Find the item "Sauce Labs Fleece Jacket" and add it to cart (use .filter())
+Navigate to the cart by clicking the cart icon
+Verify the item name appears in the cart
+Remove the item from the cart

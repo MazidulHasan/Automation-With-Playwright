@@ -7,6 +7,7 @@ test('test', async ({ page }) => {
   await page.locator('[data-test="password"]').click();
   await page.locator('[data-test="password"]').fill('secret_sauce');
   await page.locator('[data-test="login-button"]').click();
+  
   await expect(page.locator('[data-test="item-4-title-link"]')).toBeVisible();
   await page.getByText('$29.99').click();
   await expect(page.getByText('$29.99')).toBeVisible();
