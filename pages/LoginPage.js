@@ -3,14 +3,14 @@ export class LoginPage {
     this.page = page;
 
     // All locators are defined ONCE here
-    this.usernameInput  = page.getByPlaceholder('User name');
+    this.usernameInput  = page.getByPlaceholder('Username');
     this.passwordInput  = page.getByPlaceholder('Password');
     this.loginButton    = page.getByRole('button', { name: 'Login' });
     this.errorMessage   = page.locator('[data-test="error"]');
   }
 
   async goto() {
-    await this.page.goto('https://www.saucedemo.com');
+    await this.page.goto('/');
   }
 
   async loginAs(username, password) {

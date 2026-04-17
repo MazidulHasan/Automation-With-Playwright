@@ -1,0 +1,36 @@
+In a large suite you don't want to run everything every time. Playwright lets you tag tests and run only the ones you need using --grep.
+
+
+// Tag tests with @smoke, @regression, @critical etc.
+test('login works @smoke', async ({ page }) => { ... });
+test('checkout flow @smoke @critical', async ({ page }) => { ... });
+test('sort products by price @regression', async ({ page }) => { ... });
+
+// --- Running tagged subsets from terminal ---
+
+// Run only smoke tests
+npx playwright test --grep @smoke
+
+// Run only critical tests  
+npx playwright test --grep @critical
+
+// Run all tests EXCEPT regression
+npx playwright test --grep-invert @regression
+
+// Run a specific file
+npx playwright test tests/login.spec.js
+
+// Run a specific test by title
+npx playwright test --grep "login works"
+
+// Run only on one browser
+npx playwright test --project=chromium
+
+// Run in headed mode (see the browser)
+npx playwright test --headed
+
+// Run with 1 worker (sequential — for debugging)
+npx playwright test --workers=1
+
+// Show all test names without running them
+npx playwright test --list
