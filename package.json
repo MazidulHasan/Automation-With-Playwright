@@ -11,5 +11,8 @@
     "@playwright/test": "^1.58.1",
     "@types/node": "^25.1.0"
   },
+  "dependencies": {
+    "xlsx": "^0.18.5"
+  },
   "type": "module"
 }

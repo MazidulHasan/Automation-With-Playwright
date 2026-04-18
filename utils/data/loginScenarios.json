@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "description": "standard_user logs in successfully",
+    "username": "standard_user",
+    "password": "secret_sauce",
+    "expectSuccess": true,
+    "errorContains": null
+  },
+  {
+    "id": 2,
+    "description": "locked_out_user sees locked error",
+    "username": "locked_out_user",
+    "password": "secret_sauce",
+    "expectSuccess": false,
+    "errorContains": "Sorry, this user has been locked out"
+  },
+  {
+    "id": 3,
+    "description": "wrong password shows credential mismatch error",
+    "username": "standard_user",
+    "password": "wrong_password",
+    "expectSuccess": false,
+    "errorContains": "Username and password do not match"
+  },
+  {
+    "id": 4,
+    "description": "empty username field shows validation error",
+    "username": "",
+    "password": "secret_sauce",
+    "expectSuccess": false,
+    "errorContains": "Username is required"
+  },
+  {
+    "id": 5,
+    "description": "empty password field shows validation error",
+    "username": "standard_user",
+    "password": "",
+    "expectSuccess": false,
+    "errorContains": "Password is required"
+  },
+  {
+    "id": 6,
+    "description": "performance_glitch_user eventually reaches inventory",
+    "username": "performance_glitch_user",
+    "password": "secret_sauce",
+    "expectSuccess": true,
+    "errorContains": null
+  }
+]

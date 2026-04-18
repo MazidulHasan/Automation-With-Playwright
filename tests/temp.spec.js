@@ -40,3 +40,20 @@ test.afterEach(async ({ page }, testInfo) => {
 test.afterAll('Teardown', async () => {
     console.log('Done with all tests');
   });
+
+
+  ┌────────────────────────────────┬─────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │              File              │                                              Key concepts                                               │
+  ├────────────────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ iframeHandling.spec.js         │ frameLocator(), chained frames, nested <frame> by name/index                                            │
+  ├────────────────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ fileTransfer.spec.js           │ setInputFiles(), setInputFiles([]) to clear, waitForEvent('download'), saveAs(), round-trip             │
+  ├────────────────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ userActions.spec.js            │ dragTo(), low-level mouse, keyboard.press/type/down/up, locator.hover(), mouse.move(), all dialog types │
+  ├────────────────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ advancedFixtures.spec.js       │ Imports test from helpers/fixtures.js, demonstrates all 4 patterns with isolation proof                 │
+  ├────────────────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ dataDriven/jsonDriven.spec.js  │ readFileSync + JSON.parse at module level → for...of generates tests                                    │
+  ├────────────────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ dataDriven/excelDriven.spec.js │ Seeds xlsx if missing → readExcel() at module level → same for...of pattern                             │
+  └────────────────────────────────┴─────────────────────────────────────────────────────────────────────────────────────────────────────────┘

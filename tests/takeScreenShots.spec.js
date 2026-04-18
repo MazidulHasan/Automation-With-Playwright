@@ -15,10 +15,7 @@ test.describe('Inventory tests', () => {
 
   // Runs before EVERY test — login once per test
   test.beforeEach(async ({ page }) => {
-    const loginPage = new LoginPage(page);
-    await loginPage.goto();
-    await loginPage.loginAs('standard_user', 'secret_sauce');
-    console.log('beforeEach');
+   await loginAsStandardUser(page);
   });
 
   test('shows 6 products', async ({ page }) => {
