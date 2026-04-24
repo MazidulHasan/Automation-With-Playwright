@@ -15,7 +15,7 @@ import { test as base, expect } from '@playwright/test';
 import { LoginPage }     from '../pages/LoginPage.js';
 import { InventoryPage } from '../pages/InventoryPage.js';
 import { CartPage }      from '../pages/CartPage.js';
-import { USERS }         from '../utils/testData.js';
+import { USERS, PRODUCTS } from '../utils/testData.js';
 
 export const test = base.extend({
 
@@ -41,6 +41,14 @@ export const test = base.extend({
   // ── 2b. Fixture dependency: cartPage → loggedInPage ───────────────────────
   cartPage: async ({ loggedInPage }, use) => {
     await use(new CartPage(loggedInPage));
+  },
+
+  cartPageWithData: async ({ inventoryPage }, use) =>{
+    await inventoryPage.addToCart(PRODUCTS.boltShirt);
+    await inventoryPage.goToCart();
+
+    const cartpage = new CartPage(inventoryPage.page);
+    await use(cartpage);
   },
 
   // ── 3. Worker-scoped fixture ───────────────────────────────────────────────
