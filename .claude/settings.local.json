@@ -12,7 +12,13 @@
       "mcp__playwright__browser_evaluate",
       "Bash(node testCases/generate_tc_temp.mjs)",
       "mcp__playwright__browser_type",
-      "mcp__playwright__browser_run_code"
+      "mcp__playwright__browser_run_code",
+      "Skill(update-config)",
+      "Skill(update-config:*)",
+      "Bash(npx prettier *)",
+      "Bash(node -e *)",
+      "Bash(node _xlsx_formatter_read.mjs)",
+      "Bash(node _xlsx_formatter_write.mjs)"
     ]
   },
   "enabledMcpjsonServers": [
